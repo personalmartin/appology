@@ -6,28 +6,28 @@ let mediaList = [
     title: "Golden Hour memorable Walk",
     date: "A Day I realise...I can't live without you",
     type: "photo",
-    src: "assets/sunset.jpg"
+    src: "sunset.jpg"
   },
   {
     id: 2,
     title: "Laughing Over luch together",
     date: "Pure passion over you",
     type: "photo",
-    src: "assets/cafe.jpg"
+    src: "cafe.jpg"
   },
   {
     id: 3,
     title: "Under the person I loved the most",
     date: "Time",
     type: "photo",
-    src: "assets/stargazing.jpg"
+    src: "stargazing.jpg"
   },
   {
     id: 4,
     title: "Our Unforgettable Moments",
     date: "Every Second With You",
     type: "video",
-    src: "assets/VID_20240503_212542_368.mp4"
+    src: "VID_20240503_212542_368.mp4"
   }
 ];
 
