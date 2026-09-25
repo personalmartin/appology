@@ -13,7 +13,7 @@ let mediaList = [
     title: "Laughing Over luch together",
     date: "Pure passion over you",
     type: "photo",
-    src: "cafe.jpg"
+    src: "https://github.com/personalmartin/appology/blob/main/stargazing.jpg"
   },
   {
     id: 3,
