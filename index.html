@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My World | A Sincere Apology & Promise</title>
+  <meta name="description" content="A personal, heartfelt romantic apology and promise dedicated to my one and only.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Background Ambient Effects -->
+  <canvas id="bgCanvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="brand">
+      <span>❤️</span>
+      <span>For My World</span>
+    </div>
+
+    <nav class="nav-steps">
+      <button class="nav-dot-btn active" data-page="1">
+        <span>01. Intro</span>
+      </button>
+      <button class="nav-dot-btn" data-page="2">
+        <span>02. Reflection</span>
+      </button>
+      <button class="nav-dot-btn" data-page="3">
+        <span>03. Memories</span>
+      </button>
+      <button class="nav-dot-btn" data-page="4">
+        <span>04. Apology</span>
+      </button>
+    </nav>
+
+    <button id="audioBtn" class="audio-toggle" title="Play SLANDER - Love Is Gone">
+      <span id="audioIcon">🎵</span>
+      <span id="audioText">Play Music</span>
+    </button>
+  </header>
+
+  <!-- Main Viewport Container -->
+  <main class="app-viewport">
+
+    <!-- PAGE 1: INTRODUCTION -->
+    <section id="page-1" class="page active">
+      <div class="glass-card text-center">
+        <span class="tagline">From The Bottom Of My Heart</span>
+        <h1 class="hero-title">To The Girl Who Holds My Entire Heart...</h1>
+        <p class="lead-text">
+          I created this space specifically for you. A place where I can speak to you with total honesty, vulnerability,
+          and love.
+          Please take a few moments to walk through these pages with me.
+        </p>
+        <div class="quote-box">
+          "Sometimes it takes losing our way to realize just how precious the person standing right next to us truly
+          is."
+        </div>
+        <p class="lead-text" style="font-size: 1.05rem; color: var(--text-subtle);">
+          Every word written here comes straight from my soul. I hope you can feel my sincerity.
+        </p>
+
+        <div class="btn-group" style="justify-content: center;">
+          <button class="btn-primary" onclick="switchPage(2)">
+            Read My Message <span>→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE 2: SELF-REFLECTION & REALIZATION -->
+    <section id="page-2" class="page">
+      <div class="glass-card">
+        <span class="tagline">Reflection & Accountability</span>
+        <h2 class="section-title">How Bad I Am & What I Have Realized</h2>
+        <p class="lead-text">
+          I’m sorry I didn’t love you the way you deserved, didn’t put in enough effort, and didn’t make you feel like
+          the priority you always should have been. I regret that more than I can explain.
+
+        </p>
+
+        <div class="reflection-grid">
+          <div class="reflection-card">
+            <span class="card-icon">💔</span>
+            <h3 class="card-title">Owning My Mistakes</h3>
+            <p class="card-desc">I take 100% responsibility for my actions and words. I was insensitive and failed to
+              treat you with the care you deserved.</p>
+          </div>
+
+          <div class="reflection-card">
+            <span class="card-icon">💡</span>
+            <h3 class="card-title">Realizing "True Partnership"</h3>
+            <p class="card-desc">I now understand that being a partner means listening actively, protecting your
+              feelings, and putting your peace first.</p>
+          </div>
+
+          <div class="reflection-card">
+            <span class="card-icon">🌹</span>
+            <h3 class="card-title">Understanding Your Worth</h3>
+            <p class="card-desc">You are priceless. Taking your presence or your love for granted was the biggest
+              mistake of my life.</p>
+          </div>
+
+          <div class="reflection-card">
+            <span class="card-icon">🕊️</span>
+            <h3 class="card-title">Committing To Real Change</h3>
+            <p class="card-desc">Realizing my wrongdoings is only step one. I am working on myself deeply to ensure I am
+              a better man for you.</p>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button class="btn-secondary" onclick="switchPage(1)">← Back</button>
+          <button class="btn-primary" onclick="switchPage(3)">See Our Happy Memories <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE 3: HAPPY MEMORIES & GALLERY -->
+    <section id="page-3" class="page">
+      <div class="glass-card">
+        <div class="gallery-controls">
+          <div>
+            <span class="tagline">Our Precious Journey</span>
+            <h2 class="section-title" style="margin-bottom: 4px;">Why You Mean Everything To Me</h2>
+          </div>
+          <button class="btn-secondary" onclick="openUploadModal()" style="padding: 10px 20px; font-size: 0.9rem;">
+            <span>📷</span> + Add Custom Memory
+          </button>
+        </div>
+
+        <p class="lead-text">
+          Looking through our laughter, our smiles, and our sweetest moments together... I am reminded of how insanely
+          happy I am with you.
+          You bring light into my world that no one else ever could. I cannot imagine my life without you.
+        </p>
+
+        <!-- Media Grid -->
+        <div id="mediaGrid" class="media-grid">
+          <!-- Dynamically Rendered Media Items -->
+        </div>
+
+        <div class="btn-group">
+          <button class="btn-secondary" onclick="switchPage(2)">← Back</button>
+          <button class="btn-primary" onclick="switchPage(4)">Read My Final Apology & Promise <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE 4: APOLOGY & SECOND CHANCE -->
+    <section id="page-4" class="page">
+      <div class="glass-card text-center">
+        <span class="tagline">My Solemn Promise</span>
+        <h2 class="section-title">I Am Truly Sorry — You Are My World</h2>
+        <p class="lead-text" style="max-width: 750px; margin: 0 auto 24px;">
+          I am asking for your forgiveness from the deepest corner of my heart. I want a second chance to prove to you
+          every single day that I can be the caring, loving, and supportive partner you have always deserved.
+        </p>
+
+        <!-- Promises Cards -->
+        <div class="promise-list" style="text-align: left; max-width: 700px; margin: 0 auto 32px;">
+          <div class="promise-item">
+            <span class="promise-icon">✨</span>
+            <div>
+              <strong style="color: var(--pink-glow);">I promise to listen to you with patience:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-subtle);">Your feelings will always be valid, heard, and
+                prioritized.</p>
+            </div>
+          </div>
+
+          <div class="promise-item">
+            <span class="promise-icon">✨</span>
+            <div>
+              <strong style="color: var(--pink-glow);">I promise to cherish you every single day:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-subtle);">I will never let routine or comfort make me
+                forget how blessed I am to have you.</p>
+            </div>
+          </div>
+
+          <div class="promise-item">
+            <span class="promise-icon">✨</span>
+            <div>
+              <strong style="color: var(--pink-glow);">I promise to grow and be your safe space:</strong>
+              <p style="font-size: 0.9rem; color: var(--text-subtle);">Whenever you face tough times, I will be your
+                rock and your gentle comfort.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Forgiveness Section -->
+        <div class="forgive-box">
+          <h3 style="font-family: var(--font-heading); font-size: 2rem; color: #fff;">Can You Give Me A Second Chance?
+          </h3>
+          <p style="color: var(--text-soft); font-size: 0.95rem; margin-top: 6px;">You are my world, and I never want to
+            let you go.</p>
+
+          <div class="forgive-actions">
+            <button class="btn-forgive" onclick="triggerForgiveness()">
+              I Forgive You ❤️
+            </button>
+            <button class="btn-talk" onclick="openTalkModal()">
+              Let's Talk 💬
+            </button>
+          </div>
+        </div>
+
+        <div class="btn-group" style="justify-content: center; margin-top: 36px;">
+          <button class="btn-secondary" onclick="switchPage(3)">← Revisit Memories</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- MODAL: ADD CUSTOM MEDIA -->
+  <div id="uploadModal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeUploadModal()">×</button>
+      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--pink-glow); margin-bottom: 16px;">Add
+        Personal Memory</h3>
+
+      <form id="uploadForm" onsubmit="handleMediaUpload(event)">
+        <div class="form-group">
+          <label>Memory Title / Caption</label>
+          <input type="text" id="mediaTitle" class="form-input" placeholder="e.g. Our First Sunset Beach Walk" required>
+        </div>
+
+        <div class="form-group">
+          <label>Date or Milestone</label>
+          <input type="text" id="mediaDate" class="form-input" placeholder="e.g. May 14th • Unforgettable Day">
+        </div>
+
+        <div class="form-group">
+          <label>Media Type</label>
+          <select id="mediaType" class="form-select" onchange="toggleMediaTypeInput()">
+            <option value="photo">Photo (Image)</option>
+            <option value="video">Video</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Upload File or Enter Media URL</label>
+          <input type="file" id="mediaFileInput" class="form-input" accept="image/*,video/*"
+            style="margin-bottom: 8px;">
+          <input type="url" id="mediaUrlInput" class="form-input" placeholder="Or paste image/video web link...">
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 16px; justify-content: center;">
+          Save To Memory Gallery
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: LIGHTBOX VIEWER -->
+  <div id="lightboxModal" class="modal-backdrop" onclick="closeLightbox()">
+    <div class="modal-card lightbox-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeLightbox()">×</button>
+      <div id="lightboxContainer"></div>
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+
+  <!-- MODAL: CELEBRATION / FORGIVENESS -->
+  <div id="celebrationModal" class="modal-backdrop">
+    <div class="modal-card celebration-box">
+      <span style="font-size: 3.5rem; display: block; margin-bottom: 12px;">💖</span>
+      <h3 class="celebration-title">Thank You My Love!</h3>
+      <p style="color: var(--text-soft); font-size: 1.1rem; margin-bottom: 20px;">
+        I promise on everything I have to make you the happiest girl in the world every single day. I won't let you
+        down.
+      </p>
+      <button class="btn-primary" onclick="closeCelebrationModal()" style="margin: 0 auto;">
+        I Love You ❤️
+      </button>
+    </div>
+  </div>
+
+
+  <!-- MODAL: LET'S TALK -->
+  <div id="talkModal" class="modal-backdrop">
+    <div class="modal-card text-center">
+      <button class="modal-close" onclick="closeTalkModal()">×</button>
+      <span style="font-size: 3rem; display: block; margin-bottom: 10px;">💬</span>
+      <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--gold-accent); margin-bottom: 12px;">
+        Let's Talk</h3>
+      <p style="color: var(--text-soft); font-size: 1rem; margin-bottom: 20px;">
+        Whenever you are ready, I am right here waiting to hear your voice and talk gently about everything.
+      </p>
+      <div class="btn-group" style="justify-content: center;">
+        <button class="btn-primary" onclick="openWhatsApp(9020954455)">
+          Message Me Directly 📲
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Hidden Background Audio (Local MP3 or YouTube Embed for SLANDER - Love Is Gone) -->
+  <audio id="localBgAudio" loop preload="auto">
+    <source src="assets/love-is-gone.mp3" type="audio/mpeg">
+    <source src="C:\Users\Martin\Desktop\martin\assets\Slander_slowed_-_I_am_sorry_don_t_leave_me..._(mp3.pm).mp3"
+      type="audio/mpeg">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+  <div id="ytContainer"
+    style="position:fixed;bottom:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;visibility:hidden;">
+    <iframe id="ytMusicFrame" width="100" height="100" src="" allow="autoplay" title="Background Audio"></iframe>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="app.js"></script>
+</body>
+
+</html>
